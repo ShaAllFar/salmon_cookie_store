@@ -2,7 +2,7 @@ var hours = [6,7,8,9,10,11,12,1,2,3,4,5,6,7,8];
 var totalCookies = 0;
 var resultsArray = [];
 function randomNumber(min,max){
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min) + 1) + min;
 };
 var pikePlace = {
   locationName: 'Pike Place',
