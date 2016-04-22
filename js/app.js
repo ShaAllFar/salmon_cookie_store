@@ -27,10 +27,8 @@ function tableHeader(){
   var tr = document.createElement('tr');
   for(var i = 0; i < headers.length; i++)
   {
-
     var th = document.createElement('th');
     th.textContent = headers[i];
-    console.log('vfdvfd' + headers[i]);
     tr.appendChild(th);
   }
   appendBody.appendChild(tr);
@@ -39,11 +37,11 @@ function tableHeader(){
 function makeRow(storeObj){
 
   var tr = document.createElement('tr');
-  var th = document.createElement('th');
-  th.textContent = storeObj.name;
-  tr.appendChild(th);
+  var td = document.createElement('td');
+  td.textContent = storeObj.name;
+  tr.appendChild(td);
   for(var i = 0; i < storeObj.storeArray.length; i++){
-    var td = document.createElement('td');
+    td = document.createElement('td');
     td.textContent = storeObj.storeArray[i];
     tr.appendChild(td);
   }
@@ -80,15 +78,17 @@ function handleFormInputs(event){
       stores[i].min = minCusty;
       stores[i].max = maxCusty;
       stores[i].avgCooksPerCustomer = avgCusty;
+      stores[i].storeArray = [];
+      stores[i].storeCount = 0;
+      stores[i].avgPurchasePerHr();
       storeFound = true;
     }
   }
   if(storeFound === true){
-    console.log(appendBody);
     var tableBody = document.getElementById('append-table-row');
-    appendBody.innerHTML = '';
+    tableBody.innerHTML = '';
+    tableHeader();
     for(var i = 0; i < stores.length; i++){
-      console.log('the table loop fired',i);
       makeRow(stores[i]);
     }
   }
@@ -98,6 +98,7 @@ function handleFormInputs(event){
     stores.push(newObj);
     makeRow(newObj);
   }
+  location = null;
 }
 
 salesForm.addEventListener('submit', handleFormInputs);
