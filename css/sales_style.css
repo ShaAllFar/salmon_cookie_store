@@ -23,22 +23,84 @@ body{
   width:600px;
   display: inline;
 }
+.content{
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  margin-top: 30px;
+
+}
 .content h3{
   font-family: 'Cookie', cursive;
   font-weight: 400;
   font-size: 50px;
-  text-shadow: 1px 1px 2px black;
-  color: rgba(255,175,75,1);
+  color: #663300;
   text-align: center;
-  background-color: red;
-  margin-top: 0px;
-  padding:5px;
+  margin: 0px;
 }
-.content ul{
+form{
+  width: 25%;
+  height: auto;
+  padding: 10px;
+  float: left;
+}
+label{
   font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color:  #663300;
+  margin: 10px;
+  padding: 5px;
+  display: inline-block;
+}
+
+input{
+  width: 75px;
+  height: 25px;
+  margin:10px;
+
+
+}
+
+button{
+  width: 250px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  font-family: 'Cookie', cursive;
   font-weight: 400;
   font-size: 25px;
-  color: black;
+  color: #663300;
   text-align: center;
-  list-style-type: none;
+  background-color: rgba(255,175,75,1);
+  border: none;
+}
+button:hover{
+  background-color: #ff914b;
+}
+
+a{
+  padding:5px;
+  margin:10px;
+}
+table{
+  width: 65%
+  height:auto;
+  text-align: center;
+  border-spacing: 0px;
+}
+
+table tr{
+  width: 50px;
+  height: 25px;
+  padding: 10px;
+}
+
+table th{
+  padding: 10px;
+  background-color: rgba(255,175,75,1);
+  border-color: rgba(255,175,75,1);
+}
+table tr:nth-child(odd) {
+  background: #eee;
 }
