@@ -1,79 +1,127 @@
 body {
    background-color: white;
    margin: 0 auto;
+   width:  900px;
 }
-.header{
-  margin-top: 50px;
-}
-.firstImg{
-  width: 150px;
 
-}
-.secondImg{
-  width: 150px;
-  -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
+.header{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
 }
 .logo{
-  width: 900px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
-.header h1{
+.logo img{
+  max-width: 150px;
+  max-height: 40px;
+}
+.logo h1{
 font-family: 'Cookie', cursive;
 font-weight: 400;
 font-size: 75px;
 text-shadow: 1px 1px 2px black;
 color: #663300;
-width: auto;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 0px;
-display: inline;
+margin: 0 auto;
+padding-left: 10px;
+padding-right: 10px;
 }
- .header p{
+
+.second-img{
+  transform: scaleX(-1);
+}
+
+.header p{
   font-family: 'Times', serif;
   font-size: 25px;
   color: #663300;
-  text-align: center;
-  margin: 0px;
-  margin-bottom: 25px;
-
-
-}
-.mainImg{
   margin: 0 auto;
-  width: 700px;
-  margin-top: 75px;
 }
-.homeImg{
-  width: 700px;
+
+.nav-div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: 900px;
+  height: 50px;
+  margin-top: 50px;
+}
+.nav-elements{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+.nav-elements li{
+  width: 150px;
+  text-align: center;
+  font-size: 20px;
+  color:white;
 
 }
 
+.home-img{
+  margin-top: 50px;
+}
+
+.about-us-head{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.about-us-head img{
+  height: 45px;
+}
+.left-fish{
+        transform: scaleX(-1);
+}
+.about-us-head h3{
+  font-family: 'Cookie', cursive;
+  font-weight: 400;
+  font-size: 75px;
+  text-shadow: 1px 1px 2px black;
+  color: #663300;
+  width: 250px;
+  margin: 0;
+  text-align: center;
+}
+.about-us-container{
+  min-height: 400px;
+}
 
 .location-head{
-  width: 600px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .location-head img{
-  width: 150px;
-
+  height: 45px;
 
 }
 .left-fish{
-  -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
-        filter: FlipH;
-        -ms-filter: "FlipH";
-}
-.right-fish{
-
 }
 .location-head h3{
   font-family: 'Cookie', cursive;
@@ -81,27 +129,47 @@ display: inline;
   font-size: 75px;
   text-shadow: 1px 1px 2px black;
   color: #663300;
-  text-align: center;
   width: 250px;
-  display: inline-block;
-
-}
-.location-section{
+  margin: 0;
   text-align: center;
+}
+
+
+
+.location-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
 }
 .location-section ul{
   list-style-type: none;
+  width: 200px;
+  text-align: center;
 }
 .location-section ul li:first-child{
-font-weight: bold;
+font-family: 'Cookie', cursive;
+font-weight: 800;
+font-size: 40px;
+color: #663300;
 }
 
 .merchandise-head{
-  width: 700px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+
 }
 .merchandise-head img{
-  width: 150px;
+  height: 45px;
 
 
 }
@@ -112,18 +180,27 @@ font-weight: bold;
   text-shadow: 1px 1px 2px black;
   color: #663300;
   text-align: center;
-  width: 200px;
-  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+}
+.merch-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.merch-main-img{
-  margin: 0 auto;
-  width: 700px;
-  border: 1px solid red;
+.merch-container div{
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
 }
-.merch-img{
-  width: 700px;
 
+hr{
+  color:black;
+  width: 900px;
 }
 /*.locationList{
   list-style-type: none;
