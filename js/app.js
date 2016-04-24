@@ -67,14 +67,14 @@ var salesForm = document.getElementById('submission_form');
 function handleFormInputs(event){
   event.preventDefault();
 
-  var location = event.target.storLocation.value;
+  var locationInput = event.target.storLocation.value;
   var minCusty = event.target.minCustomer.value;
   var maxCusty = event.target.maxCustomer.value;
   var avgCusty = event.target.avgCustomer.value;
   var storeFound = false;
 
   for(var i = 0; i < stores.length; i++){
-    if(location === stores[i].name){
+    if(locationInput === stores[i].name){
       stores[i].min = minCusty;
       stores[i].max = maxCusty;
       stores[i].avgCooksPerCustomer = avgCusty;
@@ -94,11 +94,15 @@ function handleFormInputs(event){
   }
 
   if(!storeFound){
-    var newObj = new storeLocation(location,minCusty,maxCusty,avgCusty);
+    var newObj = new storeLocation(locationInput,minCusty,maxCusty,avgCusty);
     stores.push(newObj);
     makeRow(newObj);
   }
-  location = null;
+  locationInput = null;
+  minCusty = null;
+  maxCusty = null;
+  avgCusty = null;
 }
 
 salesForm.addEventListener('submit', handleFormInputs);
+//gh-pages
